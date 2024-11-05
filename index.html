@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <header class="text-center row text-uppercase text-light">
+        <h1 class="col-12">cruds</h1>
+        <p class="col-12">products management system</p>
+      </header>
+      <div class="input row">
+        <input id="title" type="text" placeholder="title" class="col-12 m-2" />
+        <input
+          onkeyup="totalPrice()"
+          id="price"
+          type="number"
+          placeholder="price"
+          class="col-2 m-2"
+        />
+        <input
+          onkeyup="totalPrice()"
+          id="taxes"
+          type="number"
+          placeholder="taxes"
+          class="col-2 m-2"
+        />
+        <input
+          onkeyup="totalPrice()"
+          id="ads"
+          type="number"
+          placeholder="ads"
+          class="col-2 m-2"
+        />
+        <input
+          onkeyup="totalPrice()"
+          id="discount"
+          type="number"
+          placeholder="discount"
+          class="col-2 m-2"
+        />
+        <span onkeyup="totalPrice()" id="total" class="col-2 m-2"></span>
+        <input
+          id="count"
+          type="number"
+          placeholder="count"
+          class="col-12 m-2"
+        />
+        <input
+          id="category"
+          type="text"
+          placeholder="category"
+          class="col-12 m-2"
+        />
+        <button id="btn" class="btn col-12 m-2">Create</button>
+      </div>
+      <div class="output">
+        <div class="row">
+          <input
+            onkeyup="getSearch(this.value)"
+            id="search"
+            type="text"
+            placeholder="SEARCH"
+            class="col-12 m-2"
+          />
+          <button
+            onclick="searchBy(this.id)"
+            id="Search By Title"
+            class="col-6 border border-dark btn"
+          >
+            Search By Title
+          </button>
+          <button
+            onclick="searchBy(this.id)"
+            id="Search By Category"
+            class="col-6 border border-dark btn"
+          >
+            Search By Category
+          </button>
+          <div id="delAll" class="col-12 "></div>
+        </div>
+        <table class="text-light text-center col-12">
+          <tr class="pb-4 pt-4 text-uppercase w-100">
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>adds</th>
+            <th>total</th>
+            <th>category</th>
+            <th>update</th>
+            <th>delete</th>
+          </tr>
+          <tbody id="tbody" class="w-100"></tbody>
+        </table>
+      </div>
+    </div>
+    <script src="js/ss.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
